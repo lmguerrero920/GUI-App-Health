@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+ 
+             x:Class="NutriApp.Views.Quiz.MenuQuiz">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" >
+
+            <Label 
+                Margin="0,20,0,0"
+                Text="¡Pon A prueba tus conocimientos!" TextColor="Black"
+                   HorizontalOptions="Center" VerticalOptions="Center"></Label>
+ 
+            <Frame   Margin="40,10,40,20" BackgroundColor="White" >
+                <buttons:SfButton x:Name="SfButton" Text="Habitos Alimentarios" 
+                                  BackgroundColor="White"
+                                  CornerRadius="50"
+                                
+                                  TextColor="Black"
+                                  ShowIcon="True" ImageSource="saludable.png"/> 
+            </Frame>
+
+
+            <Frame   Margin="40,10,40,20" BackgroundColor="White" > 
+                <buttons:SfButton x:Name="BtnImc" Text="Alimentación Saludable" 
+                                 
+                                  BackgroundColor="White"
+                                  TextColor="Black"
+                                  ShowIcon="True" ImageSource="sana.png"/>
+
+
+            </Frame>
+            <Frame   Margin="40,10,40,20" BackgroundColor="White" >
+                <buttons:SfButton x:Name="BtnHabitos" Text="Salud y Vida" 
+                                  BackgroundColor="White"
+                                  TextColor="Black"
+                                  ShowIcon="True" ImageSource="yoga.png"/>
+
+
+            </Frame>
+            <Frame   Margin="40,0,40,20" BackgroundColor="White" >
+                <buttons:SfButton x:Name="BtnHistorias" Text="Nutrición" 
+                                  BackgroundColor="White"
+                                  TextColor="Black"
+                                  ShowIcon="True" ImageSource="dietasaludable.png"/>
+
+
+            </Frame>
+ 
+                <Image
+                    HorizontalOptions="Center"
+                    Margin="50,0,70,10"
+                    
+                    Source="meditar"
+                    ></Image>
+                
+           
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

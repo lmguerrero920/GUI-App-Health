@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="NutriApp.Views.IMC">
+ 
+    
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label 
+                Padding="10,10"
+                
+                       ></Label>
+                <StackLayout Spacing="10" Padding="25,5,25,25">
+
+               
+                <Frame  CornerRadius="20">
+                    <StackLayout>
+                         
+                <!--<Entry Placeholder="Tu Edad"
+                
+                            HorizontalTextAlignment="Center"
+                   x:Name="Edad"/>-->
+
+                        <!--<inputLayout:SfTextInputLayout
+                            x:Name="Edad"
+                                HelperText="Ingrese su edad"
+                          Hint="Edad" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Entry />
+                        </inputLayout:SfTextInputLayout>-->
+
+                        <inputLayout:SfTextInputLayout x:Name="Edads"
+                                Hint="Edad"   FocusedColor="Green" UnfocusedColor="Gray"
+                                 OutlineCornerRadius="10"
+                                                       IsHintAlwaysFloated="True" 
+                                                       ContainerType="Outlined" 
+                                                        
+                                                       >
+                            <inputLayout:SfTextInputLayout.InputViewPadding>
+                                <OnPlatform x:TypeArguments="Thickness"
+                                                        iOS="0,20,0,7"
+                                                        Android="0,20,0,15"
+                                                        WinPhone="0,20,0,15" />
+                            </inputLayout:SfTextInputLayout.InputViewPadding>
+                                <Entry   HorizontalTextAlignment="Center" 
+                                         Keyboard="Numeric"   x:Name="Edad"/>
+                                <inputLayout:SfTextInputLayout.TrailingView>
+                                    <Label 
+                                   Text="&#x1f609;">
+                                    </Label>
+                                </inputLayout:SfTextInputLayout.TrailingView>
+                            </inputLayout:SfTextInputLayout>
+
+
+                        <!--<Entry Placeholder="Peso"
+                            HorizontalTextAlignment="Center"
+                   x:Name="Peso"/>-->
+
+                        <!--<inputLayout:SfTextInputLayout
+                            x:Name="Peso"
+                                HelperText="Ingrese su peso"
+                          Hint="Peso" HorizontalOptions="Center" 
+                            VerticalOptions="Center">
+                            <Entry />
+                        </inputLayout:SfTextInputLayout>-->
+
+
+                        <inputLayout:SfTextInputLayout x:Name="Pesos"
+                                Hint="Peso" ContainerType="Outlined" 
+                                                       IsHintAlwaysFloated="True"
+                                                       FocusedColor="Green" UnfocusedColor="Gray"
+                            OutlineCornerRadius="10"
+                                                       HorizontalOptions="Center"
+                                        
+                                           ContainerBackgroundColor="#FFF" 
+                                                       >
+                            <inputLayout:SfTextInputLayout.InputViewPadding>
+                                <OnPlatform x:TypeArguments="Thickness"
+                                                        iOS="0,20,0,7"
+                                                        Android="0,20,0,15"
+                                                        WinPhone="0,20,0,15" />
+                            </inputLayout:SfTextInputLayout.InputViewPadding>
+                            <Entry    HorizontalTextAlignment="Center"
+                                    Keyboard="Numeric"
+                                    
+                                    x:Name="Peso"/>
+                                <inputLayout:SfTextInputLayout.TrailingView>
+                                    <Label
+                                   Text="&#x1f60b;">
+                                    </Label>
+                                </inputLayout:SfTextInputLayout.TrailingView>
+                            
+                            </inputLayout:SfTextInputLayout>
+
+
+                        <!--<Entry Placeholder="Altura"
+                            HorizontalTextAlignment="Center"
+                       Keyboard="Numeric"
+                   x:Name="Altura"/>-->
+                        <!--<inputLayout:SfTextInputLayout
+                            x:Name="Altura"
+                            HelperText="Ingrese su altura"
+                          Hint="Altura" HorizontalOptions="Center" 
+                            VerticalOptions="Center">
+                            <Entry />
+                        </inputLayout:SfTextInputLayout>-->
+
+                        <inputLayout:SfTextInputLayout x:Name="Alturas"
+                                                       IsHintAlwaysFloated="True"
+                                Hint="Altura" ContainerType="Outlined"   FocusedColor="Green" UnfocusedColor="Gray"
+                                                       
+                                             OutlineCornerRadius="10"           
+                                                       >
+                            <inputLayout:SfTextInputLayout.InputViewPadding>
+                                <OnPlatform x:TypeArguments="Thickness"
+                                                        iOS="0,20,0,7"
+                                                        Android="0,20,0,15"
+                                                        WinPhone="0,20,0,15" />
+                            </inputLayout:SfTextInputLayout.InputViewPadding>
+                                <Entry   HorizontalTextAlignment="Center" Keyboard="Numeric" x:Name="Altura"/>
+                                <inputLayout:SfTextInputLayout.TrailingView>
+                                    <Label
+                                   Text="&#x1f606;">
+                                    </Label>
+                                </inputLayout:SfTextInputLayout.TrailingView>
+                            
+                            </inputLayout:SfTextInputLayout>
+
+
+
+                        <Label Padding="5,5"></Label>
+                <Entry Placeholder="0.0"
+                       HorizontalTextAlignment="Center"
+                         Keyboard="Numeric"
+                        
+                       IsEnabled="False"
+                   x:Name="IMCS"/>
+
+                        <Label x:Name="mensaje"
+                              
+                               IsVisible="false"
+                               >
+                            
+                        </Label>
+
+                        <Label Padding="10,10"></Label>
+                        <button:SfButton 
+                                                                 HeightRequest="50"
+                                     WidthRequest="200"
+
+                      
+                            Text="Calcular" CornerRadius="20"
+                                         Clicked="ButtonCalcular_Clicked"
+                                         >
+                                
+                                <button:SfButton.BackgroundGradient>
+                                <gradient:SfRadialGradientBrush Radius="1.5">
+                                    <gradient:SfRadialGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#FFB57B" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#FF5361" Offset="1"/>
+                                    </gradient:SfRadialGradientBrush.GradientStops>
+                                </gradient:SfRadialGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                        </button:SfButton>
+
+                            <button:SfButton 
+                                Clicked="Limpiar_Clicked"   
+                                HeightRequest="50"
+                                     WidthRequest="200"
+                                x:Name="Limpiar"
+
+                                Text="Limpiar" CornerRadius="20"
+                                   
+                                         >
+                                <button:SfButton.BackgroundGradient >
+                                    <gradient:SfRadialGradientBrush Radius="1.5">
+                                        <gradient:SfRadialGradientBrush.GradientStops>
+                                            <gradient:SfGradientStop Color="#FFB57B" Offset="0"/>
+                                            <gradient:SfGradientStop Color="#FF5361" Offset="1"/>
+                                        </gradient:SfRadialGradientBrush.GradientStops>
+                                    </gradient:SfRadialGradientBrush>
+                                </button:SfButton.BackgroundGradient>
+                            </button:SfButton>
+
+
+                        </StackLayout>
+
+                </Frame>
+                <!--<Button Text="Calcular" 
+                        x:Name="ButtonCalcular"
+                       Clicked="ButtonCalcular_Clicked"
+                        BackgroundColor="DarkMagenta"
+                        TextColor="White"
+                        />-->
+
+               
+
+            </StackLayout>
+          
+            
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

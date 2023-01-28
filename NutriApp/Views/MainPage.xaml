@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="NutriApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#000" Padding="24" CornerRadius="0">
+            <Label Text="¡Bienvenido a NutriApp!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label  TextColor="Black" Text="Importante" FontSize="Title" Padding="30,10,30,10"/>
+        <Label  TextColor="Black"  Text="En esta aplicación podras saber cual es tu IMC(Indice de Masa Coporal),podras consultar sobre habitos saludables y deliciosas recetas que te ayudaran a tener una dieta balanceda " FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span TextColor="Black"  Text="Tenemos un juego para ti  en la sección "/>
+                        <Span TextColor="Black"  Text="Quiz" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+
+</ContentPage>

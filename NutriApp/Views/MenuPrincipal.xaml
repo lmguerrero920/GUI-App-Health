@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:NutriApp" 
+            xmlns:local1="clr-namespace:NutriApp.Views"
+            xmlns:Quiz="clr-namespace:NutriApp.Views.Quiz"
+            x:Class="NutriApp.Views.MenuPrincipal"
+      NavigationPage.HasNavigationBar="false"
+      BarTextColor="Black"
+       
+            >
+  <!--Pages can be added as references or inline--><!--
+  <ContentPage Title="Tab 1" />
+  <ContentPage Title="Tab 2" />
+  <ContentPage Title="Tab 3" />
+    
+         BarBackgroundColor="{StaticResource ColorVerde}" 
+    BarTextColor="{StaticResource ColorBlanco}"
+    
+      BarBackgroundColor="White"
+      BarTextColor="#339966"
+    -->
+
+    <NavigationPage Title="Home" IconImageSource="home_icon.png">
+        <x:Arguments>
+            <local:MainPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <!--<NavigationPage Title="IMC" IconImageSource="lista.png">
+        <x:Arguments>
+            <local1:IMC />
+        </x:Arguments>
+    </NavigationPage>-->
+    
+    <NavigationPage Title="Nutrición" IconImageSource="settings_icon.png">
+        <x:Arguments>
+            <local1:Catalogo  />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Recetas" IconImageSource="comestibles.png">
+        <x:Arguments>
+            <local:MainPage  />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Quiz" IconImageSource="premio.png">
+        <x:Arguments>
+            <Quiz:MenuQuiz />
+        </x:Arguments>
+    </NavigationPage>
+
+
+
+    <local1:IMC />
+    <local:MainPage />
+
+    <!--<TabbedPage.Children>
+        <ContentPage Title="Home"
+                     Icon="home_icon.png">
+            <Grid>
+                <Label 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Nutrición"/>
+            </Grid>
+        </ContentPage>
+        <ContentPage Title="IMC"
+                     Icon="lista.png">
+            <Grid>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Text="MI IMC" />
+            </Grid>
+        </ContentPage>
+        <ContentPage Title="Nutrición"
+                     Icon="premio.png">
+            <Grid>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Text="Nutrición" />
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Historias"
+                     Icon="lista.png">
+            <Grid>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Text="Historias" />
+            </Grid>
+        </ContentPage>
+
+        <ContentPage Title="Historias"
+                     Icon="calendario.png">
+            
+            <Grid>
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Text="Historias" />
+            </Grid>
+        </ContentPage>
+       
+
+    </TabbedPage.Children>-->
+
+</TabbedPage>
